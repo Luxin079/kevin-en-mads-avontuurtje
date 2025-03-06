@@ -5,8 +5,8 @@ public class gun : MonoBehaviour
     public float damage = 10f;
     public float range = 100f;
     public float fireRate = 1.2f; // Time between shots in seconds
-  //  public int magazineSize = 6; // Number of bullets in a magazine
-    public float reloadTime = 2.5f; // Time it takes to reload
+                                  //  public int magazineSize = 6; // Number of bullets in a magazine
+    public float reloadTime = 2.0f; // Time it takes to reload
 
     public Camera fpsCam;
     public ParticleSystem[] muzzleFlash;
@@ -15,9 +15,9 @@ public class gun : MonoBehaviour
 
     //private int currentAmmo; // Current ammo in the magazine
     private float nextTimeToFire = 0f; // Tracks when the next shot can be fired
-    //private bool isReloading = false; // Tracks if the gun is currently reloading
+                                       //private bool isReloading = false; // Tracks if the gun is currently reloading
 
-    
+
 
     private void Start()
     {
@@ -79,13 +79,13 @@ public class gun : MonoBehaviour
         wmrScript.isReloading = true;
         Debug.Log("Reloading...");
 
-        // Simulate reload time (2.5 seconds)
+        // Simulate reload time (2 seconds)
         yield return new WaitForSeconds(reloadTime);
 
         // Reset ammo and finish reloading
 
         wmrScript.currentAmmo = wmrScript.maxAmmo;
-       
+
         wmrScript.isReloading = false;
         Debug.Log("Reload Complete!");
     }
