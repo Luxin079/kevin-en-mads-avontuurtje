@@ -1,124 +1,181 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using System.Net.Security; // Required for handling UI elements
 
 public class WeaponModelReload : MonoBehaviour
 {
-    public float reloadTime = 2f; // Total time for the reload animation (2 seconds)
-    public float reloadRotationAngle = 45f; // Angle to rotate the gun upward during reload
-    public int maxAmmo = 6; // Maximum ammo capacity
-    public int currentAmmo; // Current ammo count
+    public float reloadTime = 2f;
+    public float reloadRotationAngle = 45f;
+    public int maxAmmo = 6;
+    public int currentAmmo;
 
-    private Quaternion initialRotation; // Stores the initial rotation of the weapon
-    public bool isReloading = false; // Tracks if the weapon is currently reloading
-    private Coroutine reloadCoroutine; // Stores the reload coroutine so it can be stopped
+    private Quaternion initialRotation;
+    public bool isReloading = false;
+    private Coroutine reloadCoroutine;
 
-    private Vector3 initialPosition; // Initial position of the weapon
-    public Vector3 aimPosition = new Vector3(0f, -0.105f, 0.5f); // ADS position
-    public float aimSpeed = 10f; // Speed of ADS transition (fully zoom in 0.3s)
+    private Vector3 initialPosition;
+    public Vector3 aimPosition = new Vector3(0f, -0.105f, 0.5f);
+    public float aimSpeed = 10f;
     private bool isAiming = false;
+    public float aimThreshold = 0.01f;
+
+    private Renderer[] allRenderers;
+    private Camera playerCamera;
+    public float defaultFOV = 65f; // Changed default FOV to 65
+    public float scopedFOV = 30f;
+    public float fovTransitionSpeed = 8f; // Smooth transition speed
+
+    public float currentFOV; // Tracks current FOV
+
+    private PlayerMovement playerMovement; // Reference to player's movement script
 
     private void Start()
     {
-        // Store the initial rotation and position of the weapon
         initialRotation = transform.localRotation;
         initialPosition = transform.localPosition;
-
-        // Initialize ammo to max (or any other value you want)
         currentAmmo = maxAmmo;
+
+        playerCamera = Camera.main;
+        if (playerCamera != null)
+        {
+            currentFOV = playerCamera.fieldOfView; // Set initial FOV
+        }
+
+        // Get all renderers except for Glow, Fire, and Sparks
+        Renderer[] allChildrenRenderers = GetComponentsInChildren<Renderer>();
+        allRenderers = System.Array.FindAll(allChildrenRenderers, renderer =>
+            !renderer.gameObject.name.Contains("Glow") &&
+            !renderer.gameObject.name.Contains("Fire") &&
+            !renderer.gameObject.name.Contains("Sparks")
+        );
+
+        playerMovement = GetComponentInParent<PlayerMovement>(); // Assuming the movement script is on the player object
     }
+
+
+    public void PlayReload() {
+
+        reloadCoroutine = StartCoroutine(Reload());
+    }
+
+
+
 
     private void Update()
     {
-        // Start reloading when the player presses R, is not already reloading, and ammo is not full
+        /*
+        
+        Debug.Log(" false? "+ isReloading);
         if (Input.GetKeyDown(KeyCode.R) && !isReloading && currentAmmo < maxAmmo)
         {
+
+            Debug.Log("!!");
             reloadCoroutine = StartCoroutine(Reload());
         }
 
-        // Check for shooting input (e.g., left mouse button)
         if (Input.GetMouseButtonDown(0) && currentAmmo > 0)
         {
-            // If shooting mid-reload, cancel the reload
             if (isReloading)
             {
                 CancelReload();
             }
-        }
+        }*/
 
-        // Aim down sights logic (only if not reloading)
         if (!isReloading)
         {
-            if (Input.GetMouseButton(1))
-            {
-                isAiming = true;
-            }
-            else
-            {
-                isAiming = false;
-            }
+            isAiming = Input.GetMouseButton(1);
         }
 
-        // Smoothly transition between aiming and normal position
+        // Freeze movement when aiming
+        if (playerMovement != null)
+        {
+            playerMovement.SetAiming(isAiming); // Set the aiming state
+        }
+
         Vector3 targetPosition = isAiming ? aimPosition : initialPosition;
         Quaternion targetRotation = isAiming ? Quaternion.identity : initialRotation;
 
         transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, Time.deltaTime * aimSpeed);
         transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, Time.deltaTime * aimSpeed);
+
+        bool isFullyScopedIn = Vector3.Distance(transform.localPosition, aimPosition) < aimThreshold;
+
+        // Hide all parts except effects
+        foreach (Renderer part in allRenderers)
+        {
+            if (part != null)
+            {
+                part.enabled = !isFullyScopedIn;
+            }
+        }
+
+        // Smoothly transition the FOV
+        float targetFOV = isAiming ? scopedFOV : defaultFOV;//30 65
+       
+        
+
+        currentFOV = Mathf.Lerp(currentFOV, targetFOV, Time.deltaTime * fovTransitionSpeed);
+
+
+        if (playerCamera != null)
+        {
+            playerCamera.fieldOfView = currentFOV;
+        }
+
+        
+
     }
 
-    private void CancelReload()
+    public void CancelReload()
     {
-        // Stop the reload coroutine
         if (reloadCoroutine != null)
         {
             StopCoroutine(reloadCoroutine);
         }
 
-        // Reset the weapon's rotation to its initial state
         transform.localRotation = initialRotation;
-
-        // Reset the reloading flag
         isReloading = false;
-
         Debug.Log("Weapon Model: Reload canceled!");
     }
-
+    
     private IEnumerator Reload()
     {
+
+        Debug.Log("@@");
         isReloading = true;
-        isAiming = false; // Disable aiming while reloading
+        isAiming = false;
         Debug.Log("Weapon Model: Reloading...");
 
-        // Rotate the gun upward
+
         float elapsedTime = 0f;
         Quaternion startRotation = transform.localRotation;
-        Quaternion targetRotation = Quaternion.Euler(-reloadRotationAngle, 0f, 0f) * initialRotation; // Negative angle for upward rotation
+        Quaternion targetRotation = Quaternion.Euler(-reloadRotationAngle, 0f, 0f) * initialRotation;
 
         while (elapsedTime < reloadTime / 2)
         {
-            // Smoothly rotate the gun upward
             transform.localRotation = Quaternion.Slerp(startRotation, targetRotation, elapsedTime / (reloadTime / 2));
             elapsedTime += Time.deltaTime;
             yield return null;
+            
         }
 
-        // Rotate the gun back to its original position
         elapsedTime = 0f;
         startRotation = transform.localRotation;
 
         while (elapsedTime < reloadTime / 2)
         {
-            // Smoothly rotate the gun back down
             transform.localRotation = Quaternion.Slerp(startRotation, initialRotation, elapsedTime / (reloadTime / 2));
             elapsedTime += Time.deltaTime;
+            
             yield return null;
         }
 
-        // Refill ammo after reloading
-        currentAmmo = maxAmmo;
 
-        // Finish reloading
+        currentAmmo = maxAmmo;
         isReloading = false;
         Debug.Log("Weapon Model: Reload Complete!");
     }
+
+    
 }

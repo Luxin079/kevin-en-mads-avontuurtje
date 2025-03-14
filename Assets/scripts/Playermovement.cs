@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
     public float bunnyHopMultiplier = 1.5f;
     private bool isBunnyHopping = false;
 
+    // Aiming state
+    private bool isAiming = false; // From WeaponModelReload
+
     void Update()
     {
         // Update timers
@@ -45,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
             isBunnyHopping = false; // Reset bunny hopping when grounded
         }
 
+        // Get player input for movement
         float x = 0;
         float z = 0;
 
@@ -58,11 +62,18 @@ public class PlayerMovement : MonoBehaviour
         if (!isDashing) // Prevent normal movement while dashing
         {
             float currentSpeed = speed;
+
+            if (isAiming) // Reduce speed while aiming
+            {
+                currentSpeed *= 0.5f; // Example: reduce speed while scoped in
+            }
+
             if (!isGrounded && velocity.y > 0) // If jumping, apply bunny hop multiplier
             {
                 currentSpeed *= bunnyHopMultiplier;
                 isBunnyHopping = true;
             }
+
             controller.Move(move * currentSpeed * Time.deltaTime);
         }
 
@@ -74,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Normal jump
-        if (Input.GetButton("Jump") && isGrounded)
+        if (Input.GetButton("Jump") && isGrounded && !isAiming) // Disable jump while scoped in
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
@@ -105,5 +116,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         isDashing = false;
+    }
+
+    // Method to set aiming state from WeaponModelReload
+    public void SetAiming(bool aiming)
+    {
+        isAiming = aiming;
     }
 }

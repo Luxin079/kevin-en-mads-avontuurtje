@@ -31,6 +31,17 @@ public class gun : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetButtonDown("Fire1") && wmrScript.isReloading) {
+            //cancel
+
+            Debug.Log("must cancel");
+            wmrScript.CancelReload();
+            //wmrScript.PlayCancel();
+
+
+        }
+
         // Do nothing if reloading
         if (wmrScript.isReloading)
             return;
@@ -48,6 +59,9 @@ public class gun : MonoBehaviour
             Shoot();
             nextTimeToFire = Time.time + fireRate; // Set the next time the player can shoot
         }
+
+
+
     }
 
     void Shoot()
@@ -76,7 +90,9 @@ public class gun : MonoBehaviour
 
     System.Collections.IEnumerator Reload()
     {
+
         wmrScript.isReloading = true;
+        wmrScript.PlayReload();
         Debug.Log("Reloading...");
 
         // Simulate reload time (2 seconds)
