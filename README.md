@@ -19,7 +19,7 @@
 
     1. Animaties aansturen
     
-      (<Tutorial Animation.gif>)
+![imagehere](./images/animation.gif)
 
 
     
