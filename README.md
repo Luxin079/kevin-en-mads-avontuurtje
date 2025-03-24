@@ -8,7 +8,7 @@
     1. Player Movement
     2. Shiet mechanic met muzzle flash
 
-    (Images/Animation.gif)
+    (<Animation.gif>)
 
     Tweede Mechanics:
 
@@ -18,6 +18,9 @@
     Tutorial 1:
 
     1. Animaties aansturen
-    (Images/Tutorial Animation.gif)
+    
+      (<Tutorial Animation.gif>)
+
+
     
 
