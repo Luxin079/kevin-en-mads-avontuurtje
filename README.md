@@ -1,2 +1,23 @@
 # game van kevin en mads en paco
-![voorbeeld](Images/Animation.gif)
+
+
+- Arcade Mechanics
+
+    Eerste Mechanics:
+
+    1. Player Movement
+    2. Shiet mechanic met muzzle flash
+
+    (Images/Animation.gif)
+
+    Tweede Mechanics:
+
+
+- Tutorials
+
+    Tutorial 1:
+
+    1. Animaties aansturen
+    (Images/Tutorial Animation.gif)
+    
+
