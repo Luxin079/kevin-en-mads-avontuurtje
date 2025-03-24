@@ -19,7 +19,7 @@
 
     1. Animaties aansturen
     
-![imagehere](./images/animation.gif)
+![imagehere](./Images/Animation.gif)
 
 
     
