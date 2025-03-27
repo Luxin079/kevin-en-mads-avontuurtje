@@ -9,7 +9,15 @@ Eerste Mechanics:
       #1. Player Movement
       #2. Shiet mechanic met muzzle flash
 
-      
+Player Movement:
+https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/Playermovement.cs
+
+Gun script:
+https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/gun.cs
+
+Gun animation script:
+https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/Gun%20animations.cs
+
 ![imagehere](Images/Animation.gif)
 
 
