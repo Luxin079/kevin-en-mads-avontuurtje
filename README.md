@@ -21,6 +21,8 @@ Tweede Mechanics:
       Tutorial 1:
 
       #1. Animaties aansturen
+
+![imagehere](Images/Tutorial%20Animation.gif)
     
 
     
