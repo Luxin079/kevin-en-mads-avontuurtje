@@ -4,22 +4,24 @@
 
 - Arcade Mechanics
 
-    Eerste Mechanics:
+Eerste Mechanics:
 
-    1. Player Movement
-    2. Shiet mechanic met muzzle flash
+      #1. Player Movement
+      #2. Shiet mechanic met muzzle flash
 
-![voorbeeld](Images/Animation.gif)
+      
+![imagehere](Images/Animation.gif)
 
-    Tweede Mechanics:
+
+Tweede Mechanics:
 
 
 - Tutorials
 
-    Tutorial 1:
+      Tutorial 1:
 
-    1. Animaties aansturen
+      #1. Animaties aansturen
     
-   
+
     
 
