@@ -8,7 +8,7 @@ Eerste Mechanics:
       #1. Player Movement
       #2. Shiet mechanic met muzzle flash
 
-      ![imagehere](./Images/Animation.gif)
+      ![imagehere](Images/Animation.gif)
 
 Tweede Mechanics:
 
