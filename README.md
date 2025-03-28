@@ -56,7 +56,7 @@ Tweede Mechanics:
 Pickup script:
 https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/pickup.cs
 
-Tutorial 5:
+      Tutorial 5:
 
       #5. Shooting objects
 
