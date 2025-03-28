@@ -30,6 +30,10 @@ Tweede Mechanics:
 
       #1. Animaties aansturen
 
+      Tutorial 2: 
+      
+      #2. bewegen en aansturen
+
 ![imagehere](Images/Tutorial%20Animation.gif)
     
 
