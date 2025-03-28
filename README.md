@@ -41,7 +41,17 @@ Tweede Mechanics:
 
       #3. Op platformen springen en traps
 
-![imagehere](Images/Tutorial/Animation2.gif)
+![imagehere](Images/Tutorial%20Animation2.gif)
  
  Movement script:
  https://github.com/Luxin079/unity-starter-pack/blob/main/Assets/Playermovement.cs
+
+Tutorial 4:
+
+      #4. Item pickup met particals
+
+
+![imagehere](Images/Tutorial%20Animation3.gif)
+
+Pickup script:
+https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/pickup.cs
