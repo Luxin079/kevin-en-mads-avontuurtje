@@ -37,5 +37,11 @@ Tweede Mechanics:
 ![imagehere](Images/Tutorial%20Animation.gif)
     
 
-    
+      Tutorial 3:
 
+      #3. Op platformen springen en traps
+
+![imagehere](Images/Tutorial/Animation2.gif)
+ 
+ Movement script:
+ https://github.com/Luxin079/unity-starter-pack/blob/main/Assets/Playermovement.cs
