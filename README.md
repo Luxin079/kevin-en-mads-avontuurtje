@@ -46,7 +46,7 @@ Tweede Mechanics:
  Movement script:
  https://github.com/Luxin079/unity-starter-pack/blob/main/Assets/Playermovement.cs
 
-Tutorial 4:
+      Tutorial 4:
 
       #4. Item pickup met particals
 
@@ -55,3 +55,19 @@ Tutorial 4:
 
 Pickup script:
 https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/pickup.cs
+
+Tutorial 5:
+
+      #5. Shooting objects
+
+
+![imagehere](Images/Tutorial%20Animation4.gif)
+
+Gun script:
+https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/gun.cs
+
+Gun animation script:
+https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/Gun%20animations.cs
+
+Target script:
+https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/target.cs
