@@ -1,0 +1,18 @@
+.title {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#startButton {
+    font-size: 24px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#startButton:hover {
+    background-color: #45a049;
+}
