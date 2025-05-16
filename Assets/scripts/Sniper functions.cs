@@ -54,7 +54,8 @@ public class WeaponModelReload : MonoBehaviour
     }
 
 
-    public void PlayReload() {
+    public void PlayReload()
+    {
 
         reloadCoroutine = StartCoroutine(Reload());
     }
@@ -112,8 +113,8 @@ public class WeaponModelReload : MonoBehaviour
 
         // Smoothly transition the FOV
         float targetFOV = isAiming ? scopedFOV : defaultFOV;//30 65
-       
-        
+
+
 
         currentFOV = Mathf.Lerp(currentFOV, targetFOV, Time.deltaTime * fovTransitionSpeed);
 
@@ -123,7 +124,7 @@ public class WeaponModelReload : MonoBehaviour
             playerCamera.fieldOfView = currentFOV;
         }
 
-        
+
 
     }
 
@@ -138,7 +139,7 @@ public class WeaponModelReload : MonoBehaviour
         isReloading = false;
         Debug.Log("Weapon Model: Reload canceled!");
     }
-    
+
     private IEnumerator Reload()
     {
 
@@ -157,7 +158,7 @@ public class WeaponModelReload : MonoBehaviour
             transform.localRotation = Quaternion.Slerp(startRotation, targetRotation, elapsedTime / (reloadTime / 2));
             elapsedTime += Time.deltaTime;
             yield return null;
-            
+
         }
 
         elapsedTime = 0f;
@@ -167,7 +168,7 @@ public class WeaponModelReload : MonoBehaviour
         {
             transform.localRotation = Quaternion.Slerp(startRotation, initialRotation, elapsedTime / (reloadTime / 2));
             elapsedTime += Time.deltaTime;
-            
+
             yield return null;
         }
 
@@ -177,5 +178,5 @@ public class WeaponModelReload : MonoBehaviour
         Debug.Log("Weapon Model: Reload Complete!");
     }
 
-    
+
 }
