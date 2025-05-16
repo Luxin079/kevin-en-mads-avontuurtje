@@ -71,3 +71,10 @@ https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/G
 
 Target script:
 https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/target.cs
+
+
+
+GD - M4 - PROG; Opdracht 2: "Bewegende Speler"
+
+![bewegend blokje](https://github.com/user-attachments/assets/decbc541-e17e-4089-9dd4-77836bdfcc3e)
+
