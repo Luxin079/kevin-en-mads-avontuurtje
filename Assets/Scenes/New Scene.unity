@@ -467,9 +467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d593388b6a7b24f903ea2070503cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  moveSpeed: 1
-  jumpForce: 5
+  moveSpeed: 5
+  jumpForce: 10
 --- !u!1 &1769304511
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +528,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30
+  field of view: 78
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
