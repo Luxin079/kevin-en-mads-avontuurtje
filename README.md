@@ -75,7 +75,7 @@ https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/t
                                                                                                                                                                            
 GD - M4 - PROG; Opdracht 2: "Bewegende Speler"
 
-[Script link:](Assets/Scenes/movement.cs)
+[Script link:](Assets/movement.cs)
 
 ![bewegend blokje](https://github.com/user-attachments/assets/decbc541-e17e-4089-9dd4-77836bdfcc3e)
 
