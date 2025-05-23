@@ -71,7 +71,14 @@ https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/G
 
 Target script:
 https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/target.cs
+                                                                                                                                           
                                                                                                                                                                            
+GD - M4 - PROG; Opdracht 2: "Bewegende Speler"
+
+![bewegend blokje](https://github.com/user-attachments/assets/decbc541-e17e-4089-9dd4-77836bdfcc3e)
+
+
+                                                                                                                              
 
 GD - M4 - PROG; Opdracht 3: "Timed Muntjacht"                                                                                                                
 ![bewegend blokje](https://github.com/user-attachments/assets/c3f215ae-0c3e-49cf-a5ab-2610bd90bd93)
@@ -83,8 +90,4 @@ GD - M4 - PROG; Opdracht 3: "Timed Muntjacht"
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-
-GD - M4 - PROG; Opdracht 2: "Bewegende Speler"
-
-![bewegend blokje](https://github.com/user-attachments/assets/decbc541-e17e-4089-9dd4-77836bdfcc3e)
 
