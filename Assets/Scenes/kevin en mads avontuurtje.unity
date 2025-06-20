@@ -1141,11 +1141,11 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -23.866667, z: 145.81334}
+  m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1.3333331}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 284729229}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &838245533
 GameObject:
@@ -6660,7 +6660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: gravity
@@ -6680,7 +6680,7 @@ PrefabInstance:
       objectReference: {fileID: 1862073047}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: groundDistance
-      value: 0.4
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: airMaxMultiplier
@@ -6735,6 +6735,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5476361626842677121, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1862073047}
+    - targetCorrespondingSourceObject: {fileID: 5476361626842677121, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 705507995}
     - targetCorrespondingSourceObject: {fileID: 8796701077870736441, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2130866132}
@@ -7282,7 +7285,6 @@ SceneRoots:
   - {fileID: 1020700204}
   - {fileID: 2046454761}
   - {fileID: 2131723560}
-  - {fileID: 705507995}
   - {fileID: 280213378}
   - {fileID: 523999857}
   - {fileID: 838245534}
