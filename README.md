@@ -88,7 +88,14 @@ GD - M4 - PROG; Opdracht 3: "Timed Muntjacht"
 [Script link:](Assets/Scenes/gamemanager.cs)
 
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+GD - M4 - PROG; Opdracht 4: "Start en Spel"
+
+![SceneSwitcher](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Images/progles4.gif)
+
+[Script Link:](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/sceneswitcher.cs)
+
+
+                                                                                                                                                                                                                                                                                                                           
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
