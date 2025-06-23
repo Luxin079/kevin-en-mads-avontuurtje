@@ -88,11 +88,7 @@ public class WeaponModelReload : MonoBehaviour
             isAiming = Input.GetMouseButton(1);
         }
 
-        // Freeze movement when aiming
-        if (playerMovement != null)
-        {
-            playerMovement.SetAiming(isAiming); // Set the aiming state
-        }
+       
 
         Vector3 targetPosition = isAiming ? aimPosition : initialPosition;
         Quaternion targetRotation = isAiming ? Quaternion.identity : initialRotation;
