@@ -998,7 +998,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 284729229}
@@ -6519,34 +6519,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 284729229}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1914928222 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8346081903989909412, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
-  m_PrefabInstance: {fileID: 2046454761}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &1914928225
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914928222}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1974409468
 GameObject:
   m_ObjectHideFlags: 0
@@ -6596,7 +6568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2259291199752328808, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: m_Radius
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2259291199752328808, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: m_StepOffset
@@ -6620,7 +6592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5476361626842677121, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.9
+      value: 21.278
       objectReference: {fileID: 0}
     - target: {fileID: 5476361626842677121, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6672,16 +6644,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: jumpHeight
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 1862073047}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
+      propertyPath: playerModel
+      value: 
+      objectReference: {fileID: 561338973}
+    - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
+      propertyPath: dashDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: groundDistance
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
+      propertyPath: slideTiltAngle
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 1838424434}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: airMaxMultiplier
       value: 3
@@ -6692,7 +6680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: airAccelerationRate
-      value: 0.5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: airComboAcceleration
@@ -6700,7 +6688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: consecutiveJumpResetTime
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6908244163099771454, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       propertyPath: airStrafeAccelerationRate
@@ -6745,9 +6733,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1974409469}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8346081903989909412, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1914928225}
     - targetCorrespondingSourceObject: {fileID: 694610731461383109, guid: 01814cfa38e4bfa4e8217138abe390a3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1838424438}
