@@ -95,6 +95,13 @@ GD - M4 - PROG; Opdracht 4: "Start en Spel"
 [Script Link:](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/sceneswitcher.cs)
 
 
+GD - M4 - PROG; Opdracht 6: "Volger"
+![Volger](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Images/progles6.gif)
+
+![Script Link:](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/MoveOverField.cs)
+![Script Link:](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/bullet.cs)
+![Script Link:](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/PlayerMove.cs)
+![Script Link:](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/FollowAndReturn.cs)
                                                                                                                                                                                                                                                                                                                            
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
