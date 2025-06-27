@@ -80,7 +80,7 @@ https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/t
                                                                                                                                                                            
 GD - M4 - PROG; Opdracht 2: "Bewegende Speler"
 
-[Script link:](Assets/movement.cs)
+[Script link:](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/movement.cs)
 
 ![bewegend blokje](https://github.com/user-attachments/assets/decbc541-e17e-4089-9dd4-77836bdfcc3e)
 
@@ -90,7 +90,7 @@ GD - M4 - PROG; Opdracht 2: "Bewegende Speler"
 GD - M4 - PROG; Opdracht 3: "Timed Muntjacht"                                                                                                                
 ![bewegend blokje](https://github.com/user-attachments/assets/c3f215ae-0c3e-49cf-a5ab-2610bd90bd93)
 
-[Script link:](Assets/Scenes/gamemanager.cs)
+[Script link:](https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/gamemanager.cs)
 
 
 GD - M4 - PROG; Opdracht 4: "Start en Spel"
