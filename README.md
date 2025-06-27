@@ -74,7 +74,7 @@ https://github.com/Luxin079/kevin-en-mads-avontuurtje/blob/main/Assets/scripts/t
                                                                                                                                            
 
                                                                                                                                                                            
-# PROG 4 OPDRACHten                                                                                                                                                                           
+#Prog p4 opdrachten                                                                                                                                                                           
                                                                                                                                                                            
                                                                                                                                                                            
                                                                                                                                                                            
