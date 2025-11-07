@@ -474,9 +474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1748088707}
-  count: 100
+  count: 10
   spawnCenter: {x: 0, y: 0, z: 0}
-  spawnJitter: 0.3
+  spawnJitter: 1
   explosionForce: 15
   explosionRadius: 8
   upwardModifier: 0.5
