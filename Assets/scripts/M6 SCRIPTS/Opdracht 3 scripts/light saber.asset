@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ae7e5a67c0b95418b5120929579479, type: 3}
+  m_Name: light saber
+  m_EditorClassIdentifier: Assembly-CSharp::ItemTemplate
+  itemName: light saber
+  itemType: 0
+  stats:
+    damage: 100
+    defense: 25
+    weight: 75
+  basePrice: 500
+  icon: {fileID: 0}

@@ -1,24 +1,23 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemTemplate : MonoBehaviour
+[CreateAssetMenu(menuName = "Game/Item Template")]
+public class ItemTemplate : ScriptableObject
 {
-    internal Item CreateInstance()
+    public string itemName;
+    public ItemType itemType;
+    public ItemStats stats;
+    public int basePrice;
+    public Sprite icon; // Plaatje voor UI
+
+    // Methode: maak een runtime Item van dit template
+    public Item CreateInstance()
     {
-        throw new NotImplementedException();
+        return new Item(itemName, itemType, stats, basePrice);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    // Methode: geef template-info
+    public void LogTemplate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log($"Template: {itemName} (Price: {basePrice})");
     }
 }
