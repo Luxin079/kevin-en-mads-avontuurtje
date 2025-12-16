@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ae7e5a67c0b95418b5120929579479, type: 3}
   m_Name: paladin bow
   m_EditorClassIdentifier: Assembly-CSharp::ItemTemplate
-  itemName: 
-  itemType: 0
+  itemName: paladin bow
+  itemType: 4
   stats:
-    damage: 0
+    damage: 500
     defense: 0
-    weight: 0
-  basePrice: 0
+    weight: 300
+  basePrice: 80000
   icon: {fileID: 0}

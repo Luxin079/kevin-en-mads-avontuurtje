@@ -15,8 +15,8 @@ MonoBehaviour:
   itemName: light saber
   itemType: 0
   stats:
-    damage: 100
-    defense: 25
-    weight: 75
-  basePrice: 500
+    damage: 125
+    defense: 50
+    weight: 100
+  basePrice: 10000
   icon: {fileID: 0}

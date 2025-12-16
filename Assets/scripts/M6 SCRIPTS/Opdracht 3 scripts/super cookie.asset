@@ -17,6 +17,6 @@ MonoBehaviour:
   stats:
     damage: 0
     defense: 50000
-    weight: 1
-  basePrice: 100000000
+    weight: 5
+  basePrice: 10000000
   icon: {fileID: 0}
